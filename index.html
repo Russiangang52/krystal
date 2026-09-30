@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лилия Beauty — салон красоты</title>
+  <meta name="description" content="Лилия Beauty — маникюр, педикюр, подология, эпиляция, брови и наращивание в Москве. Адрес, часы работы и услуги с ценами.">
+  <style>
+    :root {
+      --bg: #fffafc;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-strong: #ffffff;
+      --text: #1f1521;
+      --muted: #6f6372;
+      --brand: #9b3db1;
+      --brand-dark: #7b2b8d;
+      --brand-soft: #f4e6f7;
+      --line: rgba(155, 61, 177, 0.12);
+      --shadow: 0 18px 40px rgba(123, 43, 141, 0.12);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(155, 61, 177, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(244, 230, 247, 0.9), transparent 28%),
+        linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 24px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+    .panel {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main {
+      padding: 30px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(155, 61, 177, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+    .brand-row {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .brand-logo {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid rgba(155, 61, 177, 0.12);
+      object-fit: contain;
+      padding: 8px;
+      flex: 0 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      margin: 18px 0 0;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(155, 61, 177, 0.24);
+    }
+    .btn-secondary {
+      background: #fff;
+      border-color: rgba(155, 61, 177, 0.18);
+      color: var(--brand-dark);
+    }
+    .hero-side {
+      display: grid;
+      gap: 16px;
+    }
+    .info-card {
+      padding: 22px;
+    }
+    .info-title {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .info-text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .quick {
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--surface-strong);
+      border: 1px solid rgba(155, 61, 177, 0.1);
+      min-height: 116px;
+    }
+    .quick b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--brand-dark);
+    }
+    .section {
+      margin-top: 26px;
+      padding: 28px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.5;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .service-group {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(155, 61, 177, 0.1);
+    }
+    .service-group h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+    .service-list {
+      display: grid;
+      gap: 10px;
+    }
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(155, 61, 177, 0.08);
+    }
+    .service-item span { color: var(--muted); font-size: 14px; }
+    .service-item strong { text-align: right; white-space: nowrap; }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .meta {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(155, 61, 177, 0.1);
+    }
+    .meta small {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--brand-dark);
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+    .meta p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    footer {
+      padding: 28px 4px 10px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(155, 61, 177, 0.1);
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 960px) {
+      .hero, .services, .meta-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 16px; }
+      .hero-main, .section { padding: 20px; border-radius: 22px; }
+      .brand-row { align-items: flex-start; }
+      .brand-logo { width: 72px; height: 72px; border-radius: 20px; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .service-item { flex-direction: column; }
+      .service-item strong { text-align: left; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="panel hero-main">
+        <div class="brand-row">
+          <img class="brand-logo" src="logo.png" alt="Лилия Beauty">
+          <div>
+            <div class="eyebrow">Салон красоты в Москве</div>
+            <h1>Лилия Beauty</h1>
+            <p class="lead">
+              Маникюр, педикюр, подология, эпиляция, брови и наращивание — аккуратная работа, тёплый сервис и продуманная эстетика.
+            </p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+79653584365">Позвонить: +7 (965) 358-43-65</a>
+          <a class="btn btn-secondary" href="https://yandex.ru/maps/213/moscow/?ll=37.917855%2C55.702486&mode=poi&poi%5Bpoint%5D=37.917972%2C55.702912&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D128436734677&source=serp_navig&z=18.08" target="_blank" rel="noreferrer">Открыть в Яндекс Картах</a>
+        </div>
+        <div class="badge">Рождественская ул., 14, Москва · ежедневно 10:00–22:00</div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="panel info-card">
+          <h2 class="info-title">Контакты и адрес</h2>
+          <p class="info-text">
+            Рождественская ул., 14, Москва<br>
+            <a href="tel:+79653584365">+7 (965) 358-43-65</a>
+          </p>
+        </div>
+        <div class="panel info-card">
+          <h2 class="info-title">График работы</h2>
+          <p class="info-text">Понедельник — Воскресенье<br>10:00–22:00</p>
+        </div>
+        <div class="panel info-card">
+          <h2 class="info-title">Формат работы</h2>
+          <p class="info-text">Запись по телефону, удобный вход, широкий спектр услуг для рук, ног, лица и тела.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel section" id="services">
+      <div class="section-head">
+        <div>
+          <h2>Услуги и цены</h2>
+          <p>Собрал всё из ваших данных в понятные блоки — без лишнего шума, с акцентом на основные направления салона.</p>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="service-group">
+          <h3>Маникюр</h3>
+          <div class="service-list">
+            <div class="service-item"><div>Маникюр без покрытия</div><strong>1200 ₽</strong></div>
+            <div class="service-item"><div>Маникюр мужской</div><strong>1300 ₽</strong></div>
+            <div class="service-item"><div>Маникюр + лак</div><strong>1300 ₽</strong></div>
+            <div class="service-item"><div>Маникюр детский без покрытия</div><strong>600 ₽</strong></div>
+            <div class="service-item"><div>Маникюр гель-лак</div><strong>2300 ₽</strong></div>
+            <div class="service-item"><div>Укрепление твёрдым материалом</div><strong>3500 ₽</strong></div>
+            <div class="service-item"><div>Ремонт 1 ногтя</div><strong>150 ₽</strong></div>
+            <div class="service-item"><div>Снятие чужого материала</div><strong>300 ₽</strong></div>
+            <div class="service-item"><div>Дизайн: кошачий глаз, втирка, стразы, слайдер, фольга, омбре, роспись ногтей</div><strong>от 100 ₽</strong></div>
+            <div class="service-item"><div>Френч +</div><strong>500 ₽</strong></div>
+          </div>
+        </div>
+
+        <div class="service-group">
+          <h3>Педикюр и подология</h3>
+          <div class="service-list">
+            <div class="service-item"><div>Педикюр без покрытия</div><strong>2100 ₽</strong></div>
+            <div class="service-item"><div>Педикюр + лак</div><strong>2400 ₽</strong></div>
+            <div class="service-item"><div>Педикюр лайт</div><strong>от 2000 ₽</strong></div>
+            <div class="service-item"><div>Педикюр мужской</div><strong>2800 ₽</strong></div>
+            <div class="service-item"><div>Педикюр + гель-лак</div><strong>2800 ₽</strong></div>
+            <div class="service-item"><div>Удаление бородавок, 1 шт.</div><strong>1800 ₽</strong></div>
+            <div class="service-item"><div>Установка титановой нити, 1 шт.</div><strong>3000 ₽</strong></div>
+            <div class="service-item"><div>Медицинский педикюр 3 степени сложности</div><strong>от 3300 ₽</strong></div>
+            <div class="service-item"><div>Зачистка ногтевой пластины с гематомой</div><strong>1800 ₽</strong></div>
+            <div class="service-item"><div>Забор материала для анализа на грибок</div><strong>800 ₽</strong></div>
+            <div class="service-item"><div>Зачистка ногтевой пластины с онихолизисом и грибковыми заболеваниями, 1 шт.</div><strong>800 ₽</strong></div>
+            <div class="service-item"><div>Обработка стоп с трещинами</div><strong>2300 ₽</strong></div>
+            <div class="service-item"><div>Медицинский маникюр (онихолизис, псориаз, грибок)</div><strong>1800 ₽</strong></div>
+            <div class="service-item"><div>Удаление стержневой мозоли</div><strong>1300 ₽</strong></div>
+          </div>
+        </div>
+
+        <div class="service-group">
+          <h3>Эпиляция и брови</h3>
+          <div class="service-list">
+            <div class="service-item"><div>Подмышки</div><strong>600 ₽</strong></div>
+            <div class="service-item"><div>Бикини</div><strong>1600 ₽</strong></div>
+            <div class="service-item"><div>Ноги полностью</div><strong>1400 ₽</strong></div>
+            <div class="service-item"><div>Бедра</div><strong>700 ₽</strong></div>
+            <div class="service-item"><div>Голень</div><strong>700 ₽</strong></div>
+            <div class="service-item"><div>Руки полностью</div><strong>800 ₽</strong></div>
+            <div class="service-item"><div>Плечи</div><strong>400 ₽</strong></div>
+            <div class="service-item"><div>Предплечье</div><strong>400 ₽</strong></div>
+            <div class="service-item"><div>Окрашивание бровей хной</div><strong>1200 ₽</strong></div>
+            <div class="service-item"><div>Окрашивание бровей краской</div><strong>1000 ₽</strong></div>
+            <div class="service-item"><div>Коррекция воском 1 зона</div><strong>300 ₽</strong></div>
+            <div class="service-item"><div>Ламинирование бровей</div><strong>2500 ₽</strong></div>
+          </div>
+        </div>
+
+        <div class="service-group">
+          <h3>Наращивание ногтей</h3>
+          <div class="service-list">
+            <div class="service-item"><div>Коррекция нарощенных ногтей</div><strong>2800 ₽</strong></div>
+            <div class="service-item"><div>Наращивание ногтей</div><strong>3500 ₽</strong></div>
+            <div class="service-item"><div>Наращивание 1 ногтя</div><strong>300 ₽</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel section">
+      <div class="section-head">
+        <div>
+          <h2>Адрес, контакты и режим</h2>
+          <p>Блок для быстрого доступа: удобно для мобильных, удобно для карты и звонка.</p>
+        </div>
+      </div>
+
+      <div class="meta-grid">
+        <div class="meta">
+          <small>Адрес</small>
+          <p>Рождественская ул., 14, Москва</p>
+        </div>
+        <div class="meta">
+          <small>Телефон</small>
+          <p><a href="tel:+79653584365">+7 (965) 358-43-65</a></p>
+        </div>
+        <div class="meta">
+          <small>Часы работы</small>
+          <p>Ежедневно, 10:00–22:00</p>
+        </div>
+      </div>
+
+      <p class="note">
+        Если хотите, следующий шаг — я могу сразу сделать версию с формой записи, блоком отзывов и встроенной картой вместо ссылки.
+      </p>
+    </section>
+
+    <footer>
+      © Лилия Beauty · салон красоты в Москве
+    </footer>
+  </main>
+</body>
+</html>
