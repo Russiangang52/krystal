@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Услуги — Лилия Beauty</title>
+  <style>
+    :root{--ink:#1d1820;--muted:#766d78;--cream:#f4f0eb;--white:#fffdfa;--violet:#8e3da3;--line:#ddd5dc}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Arial,sans-serif}
+    .site{max-width:1360px;margin:auto;padding:0 34px}
+    .top{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .logo{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .logo img{width:45px;height:45px;object-fit:contain;border-radius:50%;background:#fff}
+    .nav{display:flex;gap:30px;color:#5f5661;font-size:13px}
+    .nav a{padding:8px 0;position:relative}
+    .nav a:after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--violet);transition:right .3s}
+    .nav a:hover{color:var(--violet)}.nav a:hover:after{right:0}
+    .top-cta{border:1px solid var(--ink);padding:11px 18px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .top-cta:hover{background:var(--ink);color:#fff}
+    .intro{padding:92px 9% 58px;border-bottom:1px solid var(--line)}
+    .label{font-size:11px;color:var(--violet);letter-spacing:.2em;text-transform:uppercase}
+    .intro h1{font:400 clamp(58px,8vw,120px)/.9 Georgia,serif;letter-spacing:-.07em;margin:20px 0}
+    .intro p{max-width:470px;color:var(--muted);font-size:17px;line-height:1.8}
+    .groups{display:grid;grid-template-columns:repeat(2,1fr);gap:0 70px;padding:70px 9%;border-bottom:1px solid var(--line)}
+    .group{padding:25px 0;border-top:1px solid var(--ink)}
+    .group h2{font:400 32px Georgia,serif;margin:0 0 20px}
+    .item{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+    .item b{color:var(--ink);font-weight:400;white-space:nowrap}
+    footer{display:flex;justify-content:space-between;padding:28px 0;color:var(--muted);font-size:12px}
+    @media(max-width:800px){.site{padding:0 20px}.nav{gap:14px}.groups{grid-template-columns:1fr;padding:55px 0}}
+    @media(max-width:560px){.top{height:auto;padding:16px 0;flex-wrap:wrap;gap:14px}.nav{order:3;width:100%;justify-content:space-between;font-size:12px}.top-cta{display:none}.intro h1{font-size:70px}.item{font-size:14px}}
+  </style>
+</head>
+<body>
+  <main class="site">
+    <header class="top">
+      <a class="logo" href="index.html"><img src="logo.png" alt=""><span>Лилия Beauty</span></a>
+      <nav class="nav"><a href="services.html">Услуги</a><a href="reviews.html">Отзывы</a><a href="contacts.html">Контакты</a><a href="https://www.instagram.com/beautyroom_liliya/" target="_blank" rel="noreferrer">Instagram</a></nav>
+      <a class="top-cta" href="index.html#booking">Записаться</a>
+    </header>
+    <section class="intro">
+      <span class="label">Лилия Beauty · прайс</span>
+      <h1>Услуги<br>для вас</h1>
+      <p>Полный список процедур и актуальные цены. Листайте страницу, чтобы посмотреть все направления салона.</p>
+    </section>
+    <section class="groups">
+      <div class="group">
+        <h2>Маникюр</h2>
+        <div class="item"><span>Маникюр без покрытия</span><b>1200 ₽</b></div>
+        <div class="item"><span>Маникюр мужской</span><b>1300 ₽</b></div>
+        <div class="item"><span>Маникюр + лак</span><b>1300 ₽</b></div>
+        <div class="item"><span>Маникюр детский без покрытия</span><b>600 ₽</b></div>
+        <div class="item"><span>Маникюр гель-лак</span><b>2300 ₽</b></div>
+        <div class="item"><span>Укрепление твёрдым материалом (гель, полигель и т.п.)</span><b>3500 ₽</b></div>
+        <div class="item"><span>Ремонт 1 ногтя</span><b>150 ₽</b></div>
+        <div class="item"><span>Снятие чужого материала</span><b>300 ₽</b></div>
+        <div class="item"><span>Дизайн: кошачий глаз, втирка, стразы, слайдер, фольга, омбре, роспись ногтей</span><b>от 100 ₽</b></div>
+        <div class="item"><span>Френч +</span><b>500 ₽</b></div>
+      </div>
+      <div class="group">
+        <h2>Подология</h2>
+        <div class="item"><span>Удаление бородавок, 1 шт.</span><b>1800 ₽</b></div>
+        <div class="item"><span>Установка титановой нити, 1 шт.</span><b>3000 ₽</b></div>
+        <div class="item"><span>Медицинский педикюр 3 степени сложности</span><b>от 3300 ₽</b></div>
+        <div class="item"><span>Зачистка ногтевой пластины с гематомой</span><b>1800 ₽</b></div>
+        <div class="item"><span>Забор материала для анализа на грибок</span><b>800 ₽</b></div>
+        <div class="item"><span>Зачистка ногтевой пластины с онихолизисом и грибковыми заболеваниями, 1 шт.</span><b>800 ₽</b></div>
+        <div class="item"><span>Обработка стоп с трещинами</span><b>2300 ₽</b></div>
+        <div class="item"><span>Медицинский маникюр (онихолизис, псориаз, грибок)</span><b>1800 ₽</b></div>
+        <div class="item"><span>Удаление стержневой мозоли</span><b>1300 ₽</b></div>
+      </div>
+      <div class="group">
+        <h2>Эпиляция</h2>
+        <div class="item"><span>Подмышки</span><b>600 ₽</b></div>
+        <div class="item"><span>Бикини</span><b>1600 ₽</b></div>
+        <div class="item"><span>Ноги полностью</span><b>1400 ₽</b></div>
+        <div class="item"><span>Бёдра</span><b>700 ₽</b></div>
+        <div class="item"><span>Голень</span><b>700 ₽</b></div>
+        <div class="item"><span>Руки полностью</span><b>800 ₽</b></div>
+        <div class="item"><span>Плечи</span><b>400 ₽</b></div>
+        <div class="item"><span>Предплечье</span><b>400 ₽</b></div>
+      </div>
+      <div class="group">
+        <h2>Педикюр</h2>
+        <div class="item"><span>Педикюр без покрытия</span><b>2100 ₽</b></div>
+        <div class="item"><span>Педикюр + лак</span><b>2400 ₽</b></div>
+        <div class="item"><span>Педикюр лайт</span><b>от 2000 ₽</b></div>
+        <div class="item"><span>Педикюр мужской</span><b>2800 ₽</b></div>
+        <div class="item"><span>Педикюр + гель-лак</span><b>2800 ₽</b></div>
+      </div>
+      <div class="group">
+        <h2>Брови</h2>
+        <div class="item"><span>Окрашивание бровей хной</span><b>1200 ₽</b></div>
+        <div class="item"><span>Окрашивание бровей краской</span><b>1000 ₽</b></div>
+        <div class="item"><span>Коррекция воском, 1 зона</span><b>300 ₽</b></div>
+        <div class="item"><span>Ламинирование бровей</span><b>2500 ₽</b></div>
+      </div>
+      <div class="group">
+        <h2>Наращивание</h2>
+        <div class="item"><span>Коррекция нарощенных ногтей</span><b>2800 ₽</b></div>
+        <div class="item"><span>Наращивание ногтей</span><b>3500 ₽</b></div>
+        <div class="item"><span>Наращивание 1 ногтя</span><b>300 ₽</b></div>
+      </div>
+    </section>
+    <footer><span>© Лилия Beauty · Москва</span><a href="index.html">На главную →</a></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лилия Beauty — салон красоты</title>
+  <style>
+    :root{--bg:#f7f4f0;--surface:rgba(255,255,255,.92);--text:#241b27;--muted:#756d76;--brand:#963fac;--dark:#712883;--soft:#f1e4f4;--line:rgba(84,49,91,.14);--shadow:0 18px 42px rgba(48,30,52,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(135deg,#fff 0%,var(--bg) 58%,#f4edf5 100%)}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:18px 28px 34px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:28px}.mini-brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:13px}.mini-brand img{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:50%}.nav{display:flex;flex-wrap:wrap;gap:3px;padding:4px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 22px rgba(48,30,52,.07);color:var(--muted);font-size:14px;font-weight:600}.nav a{padding:9px 14px;border-radius:999px;transition:color .25s,background .25s,transform .25s}.nav a:hover{color:var(--dark);background:var(--soft);transform:translateY(-2px)}
+    .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:22px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.hero-main{padding:38px;animation:rise .7s ease both}.brand-row{display:flex;align-items:center;gap:18px}.brand-logo{width:88px;height:88px;object-fit:contain;background:#fff;border-radius:24px;padding:8px;animation:float 5s ease-in-out infinite}.eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--dark);font-weight:700;font-size:14px;margin-bottom:15px}h1{margin:0;font-size:clamp(42px,7vw,78px);line-height:.95;letter-spacing:-.06em;text-transform:uppercase}.lead{max-width:53ch;color:var(--muted);font-size:18px;line-height:1.6;margin:18px 0 0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 17px;border-radius:15px;font-weight:700;border:1px solid transparent;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--brand),var(--dark));color:#fff;box-shadow:0 12px 24px rgba(155,61,177,.24)}.secondary{background:#fff;color:var(--dark);border-color:var(--line)}.badge{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--soft);color:var(--muted);font-size:14px;margin-top:16px}.hero-side{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;animation:rise .8s .12s ease both}.hero-photo{width:100%;height:260px;grid-column:1/-1;object-fit:cover;border-radius:21px}.info{padding:20px;border-radius:21px;background:#fff;border:1px solid var(--line)}.info:first-child{grid-column:1/-1}.info h2{font-size:18px;margin:0 0 8px}.info p{color:var(--muted);margin:0;line-height:1.6}
+    .section{padding:28px;margin-top:22px;animation:rise .8s .18s ease both}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}.section h2{font-size:30px;letter-spacing:-.03em;margin:0}.section-head p{color:var(--muted);margin:0}.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:180px 180px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:20px;transition:transform .35s,filter .35s}.gallery img:hover{transform:scale(1.025);filter:saturate(1.1)}.gallery img:first-child{grid-row:span 2}.booking{display:grid;grid-template-columns:1fr .75fr;gap:22px}.booking-form{display:grid;gap:11px}.booking-form label{display:grid;gap:6px;font-size:14px;font-weight:700}.booking-form input,.booking-form select,.booking-form textarea{width:100%;font:inherit;padding:12px 13px;border:1px solid var(--line);border-radius:13px;color:var(--text);background:#fff}.booking-form textarea{min-height:82px;resize:vertical}.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{outline:3px solid rgba(155,61,177,.15);border-color:var(--brand)}.status{color:var(--dark);font-size:14px;margin:0}.note{color:var(--muted);font-size:14px}.contact-line{display:grid;gap:8px;margin-top:16px;color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:14px;padding:26px 0 6px}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes shimmer{0%{transform:translateX(-120%)}100%{transform:translateX(220%)}}@keyframes pulse{0%,100%{box-shadow:0 12px 24px rgba(155,61,177,.24)}50%{box-shadow:0 16px 34px rgba(155,61,177,.4)}}.hero-main{position:relative;overflow:hidden}.hero-main:after{content:"";position:absolute;top:0;left:0;width:38%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:translateX(-120%);animation:shimmer 5s 1s ease-in-out infinite;pointer-events:none}.primary{animation:pulse 3s ease-in-out infinite}.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}.gallery img{will-change:transform}.gallery img:nth-child(2){transition-delay:.08s}.gallery img:nth-child(3){transition-delay:.16s}.gallery img:nth-child(4){transition-delay:.24s}@media(max-width:900px){.hero,.booking{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px}.gallery img:first-child{grid-row:span 2}}@media(max-width:600px){.wrap{padding:14px 16px 24px}.topbar{align-items:flex-start;flex-direction:column}.hero-main,.section{padding:20px;border-radius:22px}.brand-row{align-items:flex-start}.brand-logo{width:70px;height:70px}.hero-side{padding:8px;grid-template-columns:1fr}.hero-photo{height:240px}.info:first-child{grid-column:auto}.gallery{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,220px)}.gallery img:first-child{grid-row:auto}.actions{flex-direction:column}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="topbar">
+      <a class="mini-brand" href="index.html"><img src="logo.png" alt=""><span>Лилия Beauty</span></a>
+      <div class="nav"><a href="services.html">Услуги</a><a href="reviews.html">Отзывы</a><a href="contacts.html">Контакты</a><a href="https://www.instagram.com/beautyroom_liliya/" target="_blank" rel="noreferrer">Instagram</a></div>
+    </nav>
+    <section class="hero">
+      <div class="panel hero-main">
+        <div class="brand-row"><img class="brand-logo" src="logo.png" alt="Лилия Beauty"><div><div class="eyebrow">Салон красоты в Москве</div><h1>Лилия<br>Beauty</h1></div></div>
+        <p class="lead">Маникюр, педикюр, подология, эпиляция, брови и наращивание — аккуратная работа, тёплый сервис и забота о каждой детали.</p>
+        <div class="actions"><a class="btn primary" href="#booking">Записаться онлайн</a><a class="btn secondary" href="tel:+79653584365">Позвонить</a></div>
+        <span class="badge">Рождественская ул., 14 · ежедневно 10:00–22:00</span>
+      </div>
+      <aside class="panel hero-side"><img class="hero-photo" src="work-4.webp" alt="Работа мастера Лилия Beauty"><div class="info"><h2>Ваше время для себя</h2><p>Спокойная атмосфера, профессиональный уход и результат, которым хочется делиться.</p></div><div class="info"><h2>Телефон</h2><p><a href="tel:+79653584365">+7 (965) 358-43-65</a></p></div><div class="info"><h2>Instagram</h2><p><a href="https://www.instagram.com/beautyroom_liliya/" target="_blank" rel="noreferrer">@beautyroom_liliya</a></p></div></aside>
+    </section>
+    <section class="panel section reveal"><div class="section-head"><div><h2>Наши работы</h2><p>Идеи для вашего следующего образа</p></div><a class="btn secondary" href="https://www.instagram.com/beautyroom_liliya/" target="_blank" rel="noreferrer">Больше в Instagram</a></div><div class="gallery"><img src="work-1.webp" alt="Маникюр в светлых тонах"><img src="work-2.webp" alt="Нежный маникюр с золотым дизайном"><img src="work-3.webp" alt="Маникюр в серо-синей гамме"><img src="work-4.webp" alt="Френч с ярким акцентом"></div></section>
+    <section class="panel section reveal" id="booking"><div class="section-head"><div><h2>Записаться</h2><p>Оставьте контакты — администратор подтвердит удобное время в Instagram.</p></div></div><div class="booking"><form class="booking-form" id="booking-form"><label>Ваше имя<input name="name" type="text" placeholder="Например, Анна" required></label><label>Телефон<input name="phone" type="tel" placeholder="+7 (___) ___-__-__" required></label><label>Услуга<select name="service"><option>Маникюр</option><option>Педикюр</option><option>Подология</option><option>Эпиляция</option><option>Брови</option><option>Наращивание ногтей</option></select></label><label>Пожелания<textarea name="message" placeholder="Дата, время или дополнительные детали"></textarea></label><button class="btn primary" type="submit">Продолжить в Instagram</button><p class="status" id="status" role="status"></p></form><div class="info"><h2>Лилия Beauty</h2><p>Будем рады видеть вас ежедневно с 10:00 до 22:00.</p><div class="contact-line"><a href="tel:+79653584365">+7 (965) 358-43-65</a><a href="https://www.instagram.com/beautyroom_liliya/" target="_blank" rel="noreferrer">Написать в Instagram</a><a href="contacts.html">Адрес и карта →</a></div></div></div></section>
+    <footer>© Лилия Beauty · салон красоты в Москве</footer>
+  </main>
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+    document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+    const gallery = document.querySelector('.gallery');
+    window.addEventListener('scroll', () => {
+      if (gallery && window.innerWidth > 900) {
+        gallery.style.transform = `translateY(${Math.min(window.scrollY * -0.025, 0)}px)`;
+      }
+    }, { passive: true });
+    document.getElementById('booking-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('status').textContent='Открываем Instagram. Напишите в директ, чтобы подтвердить запись.';window.open('https://www.instagram.com/beautyroom_liliya/','_blank','noopener,noreferrer');this.reset()});
+  </script>
+</body>
+</html>
